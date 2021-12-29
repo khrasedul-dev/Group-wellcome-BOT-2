@@ -1,4 +1,5 @@
 const { Composer, Telegraf } = require('micro-bot')
+const fetch = require('node-fetch')
 
 const bot = new Telegraf('5026833569:AAHkz_WlSppeYYR-BgoAWOkheFjTQRPBJPc')
 
@@ -92,11 +93,9 @@ module.exports = app
 
 
 
-let count = 0;
-setInterval(
-  () =>
-    require("node-fetch")(process.env.URL).then(() =>
-      console.log(`[${++count}] here i pinged ${process.env.URL}`)
-    ),
+setInterval( async()=>{
+  let data = await fetch(process.env.URL)
+  console.log("Refresh success")
+},
   5*60*1000
 );
