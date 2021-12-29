@@ -1,0 +1,16 @@
+{
+  "name": "group-wellcome-bot-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro-bot -t 5026833569:AAHkz_WlSppeYYR-BgoAWOkheFjTQRPBJPc app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "micro-bot": "^2.5.3"
+  }
+}
