@@ -66,10 +66,6 @@ app.action('e',ctx=>{
     })
 })
 
-app.hears("صباح الخير",ctx=>{
-    ctx.reply("صباح الخير")
-})
-
 app.hears("مساء الخير",ctx=>{
     ctx.reply("مساء النور")
 })
@@ -80,9 +76,6 @@ app.hears(salam,ctx=>{
     ctx.reply("وعليكم السلام ورحمة الله و بركاته")
 })
 
-app.hears('صباح الخير',ctx=>{
-  ctx.reply("صباح النور")
-})
 
 app.hears('صباح الخير',ctx=>{
   ctx.reply('صباح النور')
@@ -105,5 +98,5 @@ setInterval(
     require("node-fetch")(process.env.URL).then(() =>
       console.log(`[${++count}] here i pinged ${process.env.URL}`)
     ),
-  300000
+  5*60*1000
 );
