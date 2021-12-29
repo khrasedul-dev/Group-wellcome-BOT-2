@@ -16,6 +16,8 @@ app.on("new_chat_members",(ctx=>{
     })
 }))
 
+
+
 app.action('t',ctx=>{
 
     ctx.answerCbQuery()
@@ -58,7 +60,7 @@ app.action('e',ctx=>{
     للتواصل: 0546999448`,{
         reply_markup:{
             inline_keyboard:[
-                [{text: "حنث بوعده", callback_data: "t"}]
+                [{text: "رجوع", callback_data: "t"}]
             ]
         }
     })
@@ -78,6 +80,14 @@ app.hears(salam,ctx=>{
     ctx.reply("وعليكم السلام ورحمة الله و بركاته")
 })
 
+app.hears('صباح الخير',ctx=>{
+  ctx.reply("صباح النور")
+})
+
+app.hears('صباح الخير',ctx=>{
+  ctx.reply('صباح النور')
+})
+
 
 
 //local launch
@@ -86,3 +96,14 @@ app.hears(salam,ctx=>{
 
 //onlline launch
 module.exports = app
+
+
+
+let count = 0;
+setInterval(
+  () =>
+    require("node-fetch")(process.env.URL).then(() =>
+      console.log(`[${++count}] here i pinged ${process.env.URL}`)
+    ),
+  300000
+);
