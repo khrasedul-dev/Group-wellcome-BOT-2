@@ -95,7 +95,7 @@ module.exports = app
 
 setInterval( async()=>{
   let data = await fetch(process.env.URL)
-  console.log("Refresh success")
+  console.log("Refresh success \n"+data)
 },
   5*60*1000
 );
